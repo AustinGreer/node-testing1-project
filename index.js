@@ -28,7 +28,12 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (var key in obj) {
+    obj[key] = obj[key].trim()
+  }
+  return obj
 }
+
 
 /**
  * [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
