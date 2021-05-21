@@ -8,8 +8,16 @@
  */
 function trimProperties(obj) {
   // ✨ implement
-}
+  // the parameter is an object with a string
+  // we need to return a copy of that string and trim it
 
+  let result = {}
+
+  for(var key in obj ) {
+    result[key] = obj[key].trim()
+  }
+  return result
+}
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
  * @param {object} obj - an object with properties that are strings
@@ -20,7 +28,12 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for (var key in obj) {
+    obj[key] = obj[key].trim()
+  }
+  return obj
 }
+
 
 /**
  * [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
